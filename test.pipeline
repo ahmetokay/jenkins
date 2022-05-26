@@ -7,7 +7,13 @@ pipeline {
             steps {
                 git branch: 'main', url: 'https://github.com/ahmetokay/jenkins.git'
                 
+                echo "jenkins git çekildi"
+                
+                sh "ls -lat"
+                
                 git branch: 'main', url: 'https://github.com/ahmetokay/innova.git'
+                
+                echo "innova git çekildi"
                 
                 sh "ls -lat"
             }
