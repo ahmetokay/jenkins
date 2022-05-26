@@ -2,11 +2,32 @@ pipeline {
     agent any
 
     stages {
-        stage('Git') {
+    
+        stage('Clone repository') {
+            git url: 'https://github.com/ahmetokay/jenkins.git'
+        }
+    
+        stage('Java Version Test') {
             steps {
                 sh 'java -version'
 
                 sh "ls -lat"
+            }
+        }
+        
+        stage('Java Build') {
+            steps {
+                sh 'javac example.java'
+
+                echo "dosya başarılı şekilde build edildi"
+            }
+        }
+        
+        stage('Java Run') {
+            steps {
+                sh 'java example.class'
+
+                echo "başarılı"
             }
         }
     }
