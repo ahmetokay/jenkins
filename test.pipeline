@@ -28,7 +28,7 @@ pipeline {
         
         stage('Java Run') {
             steps {
-                sh 'java Main.class'
+                sh 'java Main'
 
                 echo "başarılı"
             }
