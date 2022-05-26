@@ -6,6 +6,10 @@ pipeline {
         stage('Clone repository') {
             steps {
                 git branch: 'main', url: 'https://github.com/ahmetokay/jenkins.git'
+                
+                git branch: 'main', url: 'https://github.com/ahmetokay/innova.git'
+                
+                sh "ls -lat"
             }
         }
     
