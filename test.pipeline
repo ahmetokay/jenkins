@@ -1,10 +1,12 @@
 pipeline {
-    agent any
+    agent {
+        docker { image 'node:16.13.1-alpine' }
+    }
 
     stages {
         stage('Git') {
             steps {
-                docker run hello-world
+                sh 'node --version'
 
                 sh "ls -lat"
             }
