@@ -41,8 +41,7 @@ pipeline {
                 sh 'java Main'
 
                 echo "başarılı"
-                
-                emailext body: 'Başarılı', subject: 'Test Başarılı', to: 'ahmet.okay@outlook.com'
+           
             }
         }
     }
