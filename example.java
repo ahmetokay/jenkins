@@ -7,6 +7,9 @@ class Main {
     int first = 10;
     int second = 20;
     
+    // hatalı build test satırı
+    test();
+    
     System.out.println(first + " " + second);
 
     // add two numbers
